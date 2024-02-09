@@ -1,7 +1,7 @@
 import { vistaRanking } from "../vistas/vistaRanking.js"
 import { vistaHome } from "../vistas/vistaHome.js"
 import { vistaJoc } from "../vistas/vistaJoc.js";
-import { panel } from "./panel.js";
+
 
 
 
@@ -31,7 +31,7 @@ export const header = {
 
         document.querySelector('#juego').addEventListener('click', () => {
           document.querySelector('main').innerHTML= vistaJoc.template;
-          panel.pintaPanel();
+          vistaJoc.script()
         });
 
 

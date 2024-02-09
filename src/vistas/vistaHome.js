@@ -1,3 +1,6 @@
+import { vistaJoc } from "../vistas/vistaJoc.js";
+
+
 export const vistaHome = {
     template:  //html
     `
@@ -22,6 +25,9 @@ export const vistaHome = {
         </div>
     `,
     script : ()=>{
-
+        document.querySelector('#btnJuego').addEventListener('click', () => {
+            document.querySelector('main').innerHTML= vistaJoc.template;
+            vistaJoc.script()
+          });
     }
 }

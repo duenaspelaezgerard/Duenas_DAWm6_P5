@@ -1,3 +1,5 @@
+import { panel } from "../componentes/panel.js";
+
 export const vistaJoc = {
     template:  //html
     `
@@ -86,6 +88,10 @@ export const vistaJoc = {
         </div>
     `,
     script : ()=>{
-        
+        panel.controlTeclas()
+        panel.nuevaPieza = panel.crearNuevaPieza()
+        panel.insertarPieza()
+        panel.pintaPanel()
+        panel.iniciarMovimiento()
     }
 }
